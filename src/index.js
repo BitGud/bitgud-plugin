@@ -4,6 +4,8 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
+const API_URL = 'https://bitgud-backend.herokuapp.com'
+
 const main = (currentDirectory, { since, staged, branch, onFoundSinceRevision, onFoundChangedFiles } = {}) => {
   const scm = scms(currentDirectory)
   if (!scm) {
@@ -40,7 +42,7 @@ const main = (currentDirectory, { since, staged, branch, onFoundSinceRevision, o
   }
 
   // Send data to API
-  axios.post(`${process.env.API_URL}/commit/add`, payload)
+  axios.post(`${API_URL}/commit/add`, payload)
 
   return {
     success: failReasons.size === 0,

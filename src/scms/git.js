@@ -73,6 +73,10 @@ export const getUnstagedChangedFiles = (directory) => {
   return getChangedFiles(directory, null, false);
 };
 
+export const getGitEmail = (directory) => {
+  return runGit(directory, ["config", "user.email"]);
+};
+
 export const stageFile = (directory, file) => {
   runGit(directory, ["add", file]);
 };

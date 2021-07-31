@@ -18,6 +18,8 @@ const main = (
 
   const failReasons = new Set();
 
+  scm.getGitEmail(directory);
+
   return {
     success: failReasons.size === 0,
     errors: Array.from(failReasons),

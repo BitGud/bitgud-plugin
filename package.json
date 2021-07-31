@@ -1,0 +1,30 @@
+{
+  "name": "bitgud-plugin",
+  "version": "1.0.0",
+  "description": "bitgud npm plugin for husky hooks",
+  "repository": "bitgud/bitgud-plugin",
+  "author": "bitgud",
+  "main": "./dist",
+  "bin": "./bin/bitgud-pluginjs",
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "mri": "^1.1.6"
+  },
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "bitgud-plugin": "./bin/bitgud-plugin.js",
+    "build": "babel src -d dist --copy-files --no-copy-ignored",
+    "lint": "eslint . --ignore-path=.gitignore"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "eslint": "^7.32.0",
+    "prettier": "^2.3.2"
+  },
+  "license": "ISC"
+}

@@ -5,7 +5,7 @@
   "repository": "bitgud/bitgud-plugin",
   "author": "bitgud",
   "main": "./dist",
-  "bin": "./bin/bitgud-pluginjs",
+  "bin": "./bin/bitgud-plugin.js",
   "files": [
     "bin",
     "dist"
@@ -24,6 +24,7 @@
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.14.8",
     "eslint": "^7.32.0",
+    "husky": "^7.0.1",
     "prettier": "^2.3.2"
   },
   "license": "ISC"

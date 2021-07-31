@@ -3,7 +3,7 @@
 ## Install
 
 ```
-npm i --save-dev bitgud
+npm i --save-dev bitgud-plugin
 ```
 
 ## Pre-Commit Hook

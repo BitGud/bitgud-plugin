@@ -1,4 +1,6 @@
-const main = (currentDirectory, { onFoundSinceRevision, onFoundChangedFiles } = {}) => {
+import scms from './scms'
+
+const main = (currentDirectory, { since, staged, branch, onFoundSinceRevision, onFoundChangedFiles } = {}) => {
   const scm = scms(currentDirectory)
   if (!scm) {
     throw new Error('Unable to detect a source control manager.')

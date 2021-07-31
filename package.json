@@ -12,6 +12,8 @@
   ],
   "dependencies": {
     "chalk": "^2.4.2",
+    "execa": "^5.1.1",
+    "find-up": "^5.0.0",
     "mri": "^1.1.6"
   },
   "scripts": {
@@ -21,14 +23,10 @@
     "lint": "eslint . --ignore-path=.gitignore",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "./bin/bitgud-plugin.js --staged"
-    }
-  },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
     "eslint": "^7.32.0",
     "husky": "^7.0.1",
     "prettier": "^2.3.2"

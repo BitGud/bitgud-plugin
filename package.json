@@ -11,7 +11,9 @@
     "dist"
   ],
   "dependencies": {
+    "axios": "^0.21.1",
     "chalk": "^2.4.2",
+    "dotenv": "^10.0.0",
     "execa": "^5.1.1",
     "find-up": "^5.0.0",
     "mri": "^1.1.6"
@@ -21,7 +23,8 @@
     "bitgud-plugin": "./bin/bitgud-plugin.js",
     "build": "babel src -d dist --copy-files --no-copy-ignored",
     "lint": "eslint . --ignore-path=.gitignore",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev": "npm run build && npm run bitgud-plugin"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",

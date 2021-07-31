@@ -1,7 +1,6 @@
 import * as gitScm from './git'
-import * as hgScm from './hg'
 
-const scms = [gitScm, hgScm]
+const scms = [gitScm]
 
 export default (directory) => {
   for (const scm of scms) {

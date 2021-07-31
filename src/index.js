@@ -6,12 +6,17 @@ dotenv.config()
 
 const API_URL = 'https://bitgud-backend.herokuapp.com'
 
-const main = (currentDirectory, { since, staged, branch, onFoundSinceRevision, onFoundChangedFiles } = {}) => {
+const main = (
+  currentDirectory,
+  { since, staged, onFoundSinceRevision, onFoundChangedFiles, onFoundChangedLines } = {}
+) => {
   const scm = scms(currentDirectory)
   if (!scm) {
     throw new Error('Unable to detect a source control manager.')
   }
   const directory = scm.rootDirectory
+
+  const branch = scm.getCurrentBranchName(directory)
 
   const revision = since || scm.getSinceRevision(directory, { staged, branch })
   const longRevision = scm.getLongHash(directory, { staged, branch })

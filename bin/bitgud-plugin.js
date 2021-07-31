@@ -26,6 +26,10 @@ const bitgudResult = bitgud(
         `🎯  Found ${chalk.bold(changedFiles.length)} changed ${changedFiles.length === 1 ? 'file' : 'files'}.`
       )
     },
+
+    onFoundChangedLines: (changedLines) => {
+      console.log(`📎  Found ${chalk.bold(changedLines)} changed ${changedLines === 1 ? 'line' : 'lines'}.`)
+    },
   })
 )
 

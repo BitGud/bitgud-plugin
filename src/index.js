@@ -23,6 +23,8 @@ const main = (currentDirectory, { since, staged, branch, onFoundSinceRevision, o
 
   onFoundChangedFiles && onFoundChangedFiles(changedFiles)
 
+  onFoundChangedLines && onFoundChangedLines(linesChanged)
+
   const failReasons = new Set()
 
   const gitEmail = scm.getGitEmail(directory)

@@ -65,7 +65,12 @@ export const getChangedFiles = (directory, revision, staged) => {
 }
 
 export const getLinesChanged = (directory, revision, staged) => {
-  const output = getLines(runGit(directory, ['diff', '--numstat']))
+  const output = getLines(
+    runGit(
+      directory,
+      ['diff', '--numstat', staged ? '--cached' : null, '--diff-filter=ACMRTUB', revision].filter(Boolean)
+    )
+  )
 
   let totalLinesChanged = 0
 

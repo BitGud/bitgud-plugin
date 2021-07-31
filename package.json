@@ -18,7 +18,13 @@
     "prepublishOnly": "npm run build",
     "bitgud-plugin": "./bin/bitgud-plugin.js",
     "build": "babel src -d dist --copy-files --no-copy-ignored",
-    "lint": "eslint . --ignore-path=.gitignore"
+    "lint": "eslint . --ignore-path=.gitignore",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./bin/bitgud-plugin.js --staged"
+    }
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",

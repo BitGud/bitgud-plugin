@@ -18,6 +18,7 @@ Prepare husky
 
 ```
 npm set-script prepare "husky install"
+npm set-script bitgud-plugin "bitgud-plugin"
 npm run prepare
 ```
 

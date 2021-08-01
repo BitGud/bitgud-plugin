@@ -1,6 +1,6 @@
 {
   "name": "bitgud-plugin",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "bitgud npm plugin for husky hooks",
   "repository": "bitgud/bitgud-plugin",
   "author": "bitgud",
